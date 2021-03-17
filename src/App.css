@@ -1,0 +1,31 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange-color: #f3c266;
+  --brown-color: #4d1919d2;
+  --red-color: #df4242;
+  --gray-color: #afa8a8;
+  --light-gray-color: #f0eaea;
+  --font-size: 15px;
+  --font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+.Todo-App__container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}

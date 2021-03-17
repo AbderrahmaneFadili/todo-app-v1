@@ -1,0 +1,54 @@
+.App__header {
+  background-color: #f3c266;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App__title {
+  color: #4d1919d2;
+  font-size: 2.6rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.App__input-container {
+  margin: 1rem 0;
+  display: flex;
+  width: 100%;
+}
+
+.App__input {
+  width: 100%;
+  border: 2px solid #4d1919d2;
+  background-color: #f3c266;
+  padding: 1rem 2rem;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #4d1919d2;
+}
+
+.App__input::placeholder {
+  color: #612b2bd2;
+}
+
+.App__add-btn {
+  width: 40%;
+  display: inline-block;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #4d1919d2;
+  border: 2px solid #4d1919d2;
+  border-left: 0;
+  transition: background-color 0.4s;
+  outline: none;
+}
+
+.App__add-btn:hover {
+  background-color: #f3c266;
+}

@@ -1,0 +1,36 @@
+.App__todo-item {
+  padding: 1rem 0.8rem;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.App__todo-item:nth-child(odd) {
+  background-color: #f0eaea;
+}
+
+.App__todo-item:nth-child(even) {
+  background-color: #c5c3c3;
+}
+
+.App__todo-item__remove {
+  margin-left: auto;
+  color: #df4242;
+  visibility: hidden;
+}
+
+.App__todo-item__check {
+  color: #4d1919d2;
+  visibility: hidden;
+}
+
+.App__todo-item__title {
+  margin-left: 1rem;
+  color: #4d1919d2;
+}
+
+.App__todo-item:hover .App__todo-item__remove {
+  visibility: visible;
+}
