@@ -13,7 +13,7 @@ class App extends Component {
   //add todo
   addTodo = (title) => {
     const { todosList } = this.state;
-    todosList.push({ title, id: Math.random() });
+    todosList.push({ title, id: Math.random(), completed: false });
     this.setState({
       todosList,
     });
@@ -28,13 +28,33 @@ class App extends Component {
     });
   };
 
+  //set completed todo
+  setCompletedTodo = (id) => {
+    const { todosList } = this.state;
+    const todo = todosList.find((t) => t.id === id);
+    todo.completed = true;
+    todosList.forEach((t) => {
+      if (t.id === id) {
+        t = todo;
+      }
+    });
+    this.setState({
+      todosList,
+    });
+  };
+
   render() {
     const { todosList } = this.state;
+    console.log(todosList);
     return (
       <div className="Todo-App">
         <div className="Todo-App__container">
           <Header addTodo={this.addTodo} />
-          <TodoList todos={todosList} deleteTodo={this.deleteTodo} />
+          <TodoList
+            todos={todosList}
+            deleteTodo={this.deleteTodo}
+            setCompletedTodo={this.setCompletedTodo}
+          />
         </div>
       </div>
     );

@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { FaRegTrashAlt, FaCheck } from "react-icons/fa";
 import "./TodoItem.css";
 
-const TodoItem = ({ id, title, deleteTodo }) => {
+const TodoItem = ({ id, title, deleteTodo, setCompletedTodo }) => {
   const [completed, setCompleted] = useState(false);
 
   const completedTodo = () => {
+    //for update the ui
     setCompleted(!completed);
+    //for update the todo item as completed
+    setCompletedTodo(id);
   };
 
-  console.log(id, title);
   return (
     <li className="App__todo-item">
       {/* Icon Left : check */}
